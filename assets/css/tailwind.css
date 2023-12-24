@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* @apply bg-black/25 outline outline-1 outline-white; */
+}
+
+@layer base {
+  body {
+    @apply scroll-smooth bg-[#F6F4F5];
+  }
+
+  main {
+    @apply py-4;
+    @apply lg:py-12;
+  }
+}
+
+@layer utilities {
+  .alley-width {
+    @apply max-w-7xl w-full;
+  }
+
+  .alley-padding {
+    @apply px-4;
+    @apply lg:px-10;
+  }
+
+  .alley-margin {
+    @apply mx-auto;
+  }
+
+  .alley {
+    @apply alley-width alley-padding alley-margin;
+  }
+
+  .layout {
+    @apply flex flex-col min-h-screen;
+    overscroll-behavior: none;
+  }
+
+  .gradient-button-cta {
+    border-radius: 10px;
+    background: var(
+      --linear-red-orange,
+      linear-gradient(90deg, #d20653 0%, #ff951d 100%)
+    );
+  }
+
+  .follow-button-cta {
+    border-radius: 14px;
+    background: var(
+      --linear-red-orange,
+      linear-gradient(90deg, #d20653 0%, #ff951d 100%)
+    );
+  }
+
+  .grid-bases {
+    @apply bg-white p-4 lg:p-6 rounded-[24px] lg:rounded-[21px];
+  }
+}
